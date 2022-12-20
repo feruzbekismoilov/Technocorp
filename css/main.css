@@ -183,13 +183,26 @@ a{
     border: 1px solid #fff;
     color: #fff;
 }
-
+@media screen and (max-width:1300px) {
+    .site-header__wrapper__start{
+        padding-right: 0;
+    }
+    .site-nav__list{
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+@media screen and (max-width:1165px) {
+    .site-nav{
+        display: none;
+    }
+}
 /* HEADER STYLE END*/
 
-.site-main{
+.home-main{
     display: flex;
 }
-.site-main >div{
+.home-main >div{
     width: 50%;
     height: 100%;
 }
@@ -197,6 +210,17 @@ a{
     padding-top: 293px;
     padding-left: 60px;
     background-color: #fff;
+}
+@media screen and (max-width:1165px) {
+    .site-header{
+        padding-top: 20px;
+    }
+    .site-main__start{
+        display: none;
+    }
+    .home-main>div{
+        width: 100%;
+    }
 }
 .site-main__start-title{
     width: 80%;
@@ -206,6 +230,11 @@ a{
     font-size: 42px;
     line-height: 65px;
     color: #201F1E;
+}
+@media screen and (max-width:1300px) {
+    .site-main__start-title{
+        width: 100%;
+    }
 }
 .site-main__start-desc{
     width: 75%;
@@ -265,6 +294,15 @@ a{
     font-size: 20px;
     line-height: 24px;
     color: #ffffffb3;
+}
+@media screen and (max-width:1165px) {
+    .site-main__end{
+        text-align: center;
+    }
+    .site-main__end-list{
+        margin: 0 auto;
+    }
+       
 }
 .site-main__end-list{
     display: flex;
@@ -375,6 +413,114 @@ a{
         transform: translateY(0);
     }
 }
+@media screen and (max-width:694px) {
+    .xizmatlar-main__item{
+        margin: 0 auto;
+        margin-bottom: 30px;
+        transform: translateY(0);
+    }
+}
 /* XIZMATLAR PAGE STYLE END */
 
     
+/* LOYIHALAR PAGE STYLE START */
+.loyihalar-wrapper{
+    text-align: center;
+}
+.loyihalar-wrapper__top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35.6px;
+}
+.loyihalar-wrapper__top__start{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.loyihalar-wrapper__top-list{
+    display: flex;
+    gap: 40px;
+}
+.loyihalar-wrapper__top-item{
+    position: relative;
+}
+.loyihalar-wrapper__top-link{
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 5px;
+    line-height: 19px;
+    color: #A6A6A6;
+}
+.loyihalar-wrapper__top-link:hover{
+    color: #494846;
+}
+.loyihalar-wrapper__top-link::after{
+    content:" ";
+    width: 0%;
+    height: 3px;
+    background-color:#0A7F2E;
+    position: absolute;
+    bottom:-5px;
+    left: 50%;
+    transform: translatex(-50%);
+    transition: width .26s linear    ;
+    
+}
+.loyihalar-wrapper__top-link:hover::after{
+    width: 97%;
+}
+.loyihalar-wrapper__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 80px;;
+    padding-left: 0;
+}
+.loyihalar-wrapper__item{
+    width: 420px;
+    filter: drop-shadow(0px 0px 30px rgba(10, 127, 46, 0.15));
+}
+.loyihalar-wrapper__link{
+    width: 50%;
+}
+.loyihalar-wrapper__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.loyihalar-wrapper__item:nth-child(1){
+    padding: 20px;
+}
+.loyihalar-wrapper__button{
+    margin-bottom: 60px;
+    padding: 20px 57px;
+    border: 2px solid #0A7F2E;
+    background-color: transparent;
+    font-size: 24px;
+    line-height: 29px;
+    color: #0A7F2E;
+}
+@media screen and (max-width:1000px) {
+    .loyihalar-wrapper__top-list{
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+@media screen and (max-width:879px) {
+    .loyihalar-wrapper__list{
+        text-align: center;
+    }
+    .loyihalar-wrapper__item{
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:460px) {
+    .loyihalar-wrapper__top{
+        flex-direction: column;  
+    }
+    .loyihalar-wrapper__top-list{
+        text-align: center;
+    }
+}
+/* LOYIHALAR PAGE STYLE END */
